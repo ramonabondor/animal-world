@@ -21,7 +21,7 @@
             <strong>Colors</strong>
             <small>Learn colors</small>
         </a>
-        <a class="home-card card-green" href="{{ route('games') }}">
+        <a class="home-card card-green" href="{{ route('games.index') }}">
             <span class="card-art">🧩</span>
             <strong>Games</strong>
             <small>Let's play!</small>

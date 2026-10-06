@@ -893,3 +893,252 @@ button {
         font-size: 1rem;
     }
 }
+
+/* =========================
+   Games Hub
+========================= */
+
+.games-hub {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 25px;
+    text-align: center;
+}
+
+.games-hub h1 {
+    margin-bottom: 10px;
+    font-size: 3rem;
+    color: #6c5ce7;
+}
+
+.games-intro {
+    margin-bottom: 35px;
+    font-size: 1.4rem;
+    color: #174a82;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.game-card {
+    min-height: 250px;
+    padding: 30px 20px;
+    background: white;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #174a82;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+a.game-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.game-icon {
+    margin-bottom: 15px;
+    font-size: 4rem;
+}
+
+.game-card h2 {
+    margin: 10px 0;
+    font-size: 1.7rem;
+}
+
+.game-card p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.coming-soon {
+    opacity: 0.65;
+}
+
+.coming-soon span {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 15px;
+    background: #f1f2f6;
+    border-radius: 20px;
+    font-weight: bold;
+    color: #6c5ce7;
+}
+
+@media (max-width: 850px) {
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .games-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .games-hub h1 {
+        font-size: 2.4rem;
+    }
+}
+/* =========================
+   Counting Game
+========================= */
+
+.counting-game {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 35px 25px 60px;
+    text-align: center;
+}
+
+.counting-game h1 {
+    margin: 0 0 20px;
+    font-size: 3rem;
+    color: #6c5ce7;
+}
+
+.counting-score {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #174a82;
+}
+
+.counting-question {
+    display: inline-block;
+    margin: 10px auto 30px;
+    padding: 15px 35px;
+    background: white;
+    border-radius: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #174a82;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Zona cu obiectele */
+
+.objects-container {
+    max-width: 700px;
+    min-height: 190px;
+    margin: 0 auto 30px;
+    padding: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 35px;
+}
+
+.counting-object {
+    display: inline-block;
+    font-size: 4.5rem;
+    line-height: 1;
+}
+
+/* Butoanele 1-10 */
+
+.number-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    margin: 20px auto;
+}
+
+.number-button {
+    width: 90px;
+    height: 90px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: white;
+    color: #6c5ce7;
+
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.number-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+.number-button.correct {
+    background: #81c784;
+    color: white;
+    transform: scale(1.12);
+}
+
+.number-button.wrong {
+    background: #ff8a80;
+    color: white;
+}
+
+/* Great job / Try again */
+
+.counting-message {
+    min-height: 60px;
+    margin-top: 20px;
+
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6c5ce7;
+}
+
+/* Final */
+
+.counting-finished {
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 35px;
+
+    background: white;
+    border-radius: 35px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Telefon / tabletă */
+
+@media (max-width: 600px) {
+    .counting-game h1 {
+        font-size: 2.3rem;
+    }
+
+    .counting-question {
+        font-size: 1.5rem;
+    }
+
+    .counting-object {
+        font-size: 3.5rem;
+    }
+
+    .number-button {
+        width: 75px;
+        height: 75px;
+        font-size: 2rem;
+    }
+
+    .objects-container {
+        min-height: 150px;
+        gap: 12px;
+    }
+}

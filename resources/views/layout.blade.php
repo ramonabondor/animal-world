@@ -17,7 +17,7 @@
             <nav class="nav">
                 <a href="{{ route('animals.index') }}">🐾 Animals</a>
                 <a href="{{ route('colors') }}">🎨 Colors</a>
-                <a href="{{ route('games') }}">🧩 Game</a>
+                <a href="{{ route('games.index') }}">🧩 Game</a>
             </nav>
         </header>
 

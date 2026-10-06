@@ -39,11 +39,4 @@ class AnimalController extends Controller
     ));
 }
 
-
-    public function game()
-{
-    $animals = Animal::orderBy('id')->get();
-
-    return view('games.index', compact('animals'));
-}
 }
