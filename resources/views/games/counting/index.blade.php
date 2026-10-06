@@ -44,6 +44,9 @@
 </div>
 
 <script>
+
+
+
     const objects = [
         { emoji: '🍎', name: 'apples' },
         { emoji: '⭐', name: 'stars' },
@@ -55,6 +58,9 @@
 
     const totalRounds = 5;
 
+    let previousObject = null;
+    let previousCount = null;
+    let roundLocked = false;
     let score = 0;
     let round = 0;
     let correctAnswer = 0;
@@ -117,53 +123,66 @@
         return shuffle([...answers]);
     }
 
+function newCountingRound() {
+    roundLocked = false;
+    message.textContent = '';
 
-    function newCountingRound() {
-        message.textContent = '';
+    let object;
 
-        const object =
-            objects[randomNumber(0, objects.length - 1)];
+    do {
+        object = objects[randomNumber(0, objects.length - 1)];
+    } while (
+        previousObject &&
+        object.name === previousObject.name
+    );
 
+    do {
         correctAnswer = randomNumber(1, 10);
+    } while (correctAnswer === previousCount);
 
-        questionElement.textContent =
-            `How many ${object.name}?`;
+    previousObject = object;
+    previousCount = correctAnswer;
 
-        objectsContainer.innerHTML = '';
+    questionElement.textContent =
+        `How many ${object.name}?`;
 
-        for (let i = 0; i < correctAnswer; i++) {
-            const item = document.createElement('span');
+    objectsContainer.innerHTML = '';
 
-            item.className = 'counting-object';
-            item.textContent = object.emoji;
+    for (let i = 0; i < correctAnswer; i++) {
+        const item = document.createElement('span');
 
-            objectsContainer.appendChild(item);
-        }
+        item.className = 'counting-object';
+        item.textContent = object.emoji;
 
-        numberOptions.innerHTML = '';
-
-        const answers = createAnswers(correctAnswer);
-
-        answers.forEach(answer => {
-            const button = document.createElement('button');
-
-            button.className = 'number-button';
-            button.textContent = answer;
-
-            button.addEventListener('click', () => {
-                checkCountingAnswer(answer, button);
-            });
-
-            numberOptions.appendChild(button);
-        });
+        objectsContainer.appendChild(item);
     }
+
+    numberOptions.innerHTML = '';
+
+    const answers = createAnswers(correctAnswer);
+
+    answers.forEach(answer => {
+        const button = document.createElement('button');
+
+        button.className = 'number-button';
+        button.textContent = answer;
+
+        button.addEventListener('click', () => {
+            checkCountingAnswer(answer, button);
+        });
+
+        numberOptions.appendChild(button);
+    });
+}
 
 
     function checkCountingAnswer(answer, button) {
-        if (answer === correctAnswer) {
+        if (roundLocked) return;
+
+            if (answer === correctAnswer) {
+            roundLocked = true;
 
             message.textContent = '⭐ Great job! ⭐';
-
             button.classList.add('correct');
 
             score++;
@@ -180,7 +199,6 @@
             } else {
                 setTimeout(newCountingRound, 1000);
             }
-
         } else {
 
             message.textContent = '💛 Try again!';
