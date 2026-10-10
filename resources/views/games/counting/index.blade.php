@@ -149,13 +149,16 @@ function newCountingRound() {
     objectsContainer.innerHTML = '';
 
     for (let i = 0; i < correctAnswer; i++) {
-        const item = document.createElement('span');
+    const item = document.createElement('span');
 
-        item.className = 'counting-object';
-        item.textContent = object.emoji;
+    item.className = 'counting-object';
+    item.textContent = object.emoji;
 
-        objectsContainer.appendChild(item);
-    }
+    // Fiecare obiect apare puțin după cel anterior
+    item.style.animationDelay = `${i * 0.08}s`;
+
+    objectsContainer.appendChild(item);
+}
 
     numberOptions.innerHTML = '';
 
