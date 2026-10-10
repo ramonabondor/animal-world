@@ -102,7 +102,7 @@ public/assets/sounds/
 ## 📂 Main Project Structure
 
 ```text
-animal-world/
+little-explorers/
 ├── app/
 │   ├── Http/Controllers/
 │   └── Models/
@@ -128,7 +128,7 @@ Clone the repository and enter the project directory:
 
 ```bash
 git clone <repository-url>
-cd animal-world
+cd little-explorers
 ```
 
 Install the PHP dependencies:
