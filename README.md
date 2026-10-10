@@ -1,12 +1,12 @@
-# 🐾 Animal World
+# 🐾 Little Explorers
 
-**Animal World** is a colorful and interactive educational web application designed for young children to learn about animals in a simple and playful way.
+**Little Explorers** is a colorful and interactive educational web application designed for young children to learn about animals in a simple and playful way.
 
 The project was built with **Laravel**, **PHP**, **Blade**, **JavaScript**, and **CSS**.
 
 ## 🌟 About the Project
 
-Animal World introduces children to different animals through colorful illustrations, simple descriptions, animal sounds, and friendly character voices.
+Little Explorers introduces children to different animals through colorful illustrations, simple descriptions, animal sounds, and friendly character voices.
 
 Children can explore the animals individually and use the Previous and Next buttons to move through the collection.
 
@@ -46,7 +46,7 @@ The application also contains a Colors section designed to help young children r
 
 ## 🎮 Animal Game
 
-Animal World includes an interactive animal game.
+Little Explorers includes an interactive animal game.
 
 Children are asked to identify the correct animal and can listen to its real sound for an additional clue.
 
@@ -179,7 +179,7 @@ Then open the address displayed by Laravel in your browser.
 
 ## 🎯 Project Goal
 
-The goal of Animal World is to create a simple, friendly, and interactive learning environment where young children can discover animals through images, colors, sounds, repetition, and play.
+The goal of Little Explorers is to create a simple, friendly, and interactive learning environment where young children can discover animals through images, colors, sounds, repetition, and play.
 
 ## 🌱 Future Improvements
 
@@ -194,6 +194,6 @@ Planned improvements include:
 
 ## 📌 Project Status
 
-**Animal World is currently under development.**
+**Little Explorers is currently under development.**
 
 More features and improvements will be added as the project grows.

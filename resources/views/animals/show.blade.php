@@ -19,17 +19,7 @@
     >
 </audio>
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    const audio = document.getElementById('animalVoice');
 
-    audio.volume = 1;
-
-    audio.play().catch(function () {
-        console.log('Browser blocked automatic audio playback.');
-    });
-});
-</script>
 
         <div class="animal-navigation">
 

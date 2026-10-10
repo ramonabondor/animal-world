@@ -1,0 +1,189 @@
+/* =========================
+   Counting Game
+========================= */
+
+.counting-game {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 35px 25px 60px;
+    text-align: center;
+}
+
+.counting-game h1 {
+    margin: 0 0 20px;
+    font-size: 3rem;
+    color: #6c5ce7;
+}
+
+.counting-score {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #174a82;
+}
+
+.counting-question {
+    display: inline-block;
+    margin: 10px auto 30px;
+    padding: 15px 35px;
+    background: white;
+    border-radius: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #174a82;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Zona cu obiectele */
+.counting-object {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 90px;
+    height: 90px;
+    font-size: 4rem;
+
+    background: white;
+    border-radius: 25px;
+}
+
+/* Butoanele 1-10 */
+
+.number-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+
+    margin: 20px auto;
+}
+
+.number-button {
+    width: 90px;
+    height: 90px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: white;
+    color: #6c5ce7;
+
+    font-size: 2.5rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.number-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+.number-button.correct {
+    background: #81c784;
+    color: white;
+    transform: scale(1.12);
+}
+
+.number-button.wrong {
+    background: #ff8a80;
+    color: white;
+}
+
+/* Great job / Try again */
+
+.counting-message {
+    min-height: 60px;
+    margin-top: 20px;
+
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6c5ce7;
+}
+
+/* Final */
+
+.counting-finished {
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 35px;
+
+    background: white;
+    border-radius: 35px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Grila de numărat: 5 obiecte pe rând pe laptop */
+.counting-game .objects-container {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 90px));
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 700px;
+    min-height: 240px;
+    margin: 0 auto 30px;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 35px;
+}
+
+.counting-game .counting-object {
+    width: 100%;
+    min-width: 0;
+    height: 90px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    animation: countingPop 0.35s ease both;
+}
+
+/* Cardul de pe pagina Games nu trebuie să preia stilurile paginii Counting. */
+.games-grid .game-card.counting-game {
+    max-width: none;
+    margin: 0;
+    padding: 30px 20px;
+}
+
+/* Telefon / tabletă */
+@media (max-width: 600px) {
+    .counting-game h1 {
+        font-size: 2.3rem;
+    }
+
+    .counting-question {
+        font-size: 1.5rem;
+        padding: 12px 18px;
+    }
+
+    .counting-game .objects-container {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 8px;
+        min-height: 170px;
+        padding: 15px 10px;
+    }
+
+    .counting-game .counting-object {
+        height: 55px;
+        font-size: 2.2rem;
+        border-radius: 12px;
+    }
+
+    .number-options {
+        gap: 12px;
+    }
+
+    .number-button {
+        width: 75px;
+        height: 75px;
+        font-size: 2rem;
+    }
+}
+

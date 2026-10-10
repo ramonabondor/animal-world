@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title ?? 'Animal World' }}</title>
+    <title>{{ $title ?? 'Little Explorers' }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
     <div class="app-shell">
         <header class="topbar">
             <a class="icon-button" href="{{ route('home') }}" aria-label="Home">🏠</a>
-            <a class="brand" href="{{ route('home') }}">Animal World <span>🐾</span></a>
+            <a class="brand" href="{{ route('home') }}">Little Explorers <span>🌈</span></a>
             <nav class="nav">
                 <a href="{{ route('animals.index') }}">🐾 Animals</a>
                 <a href="{{ route('colors') }}">🎨 Colors</a>

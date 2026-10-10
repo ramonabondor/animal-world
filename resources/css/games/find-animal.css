@@ -1,0 +1,192 @@
+.game-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.game-container h1 {
+    font-size: 3rem;
+    color: #6c5ce7;
+}
+
+.score {
+    font-size: 1.7rem;
+    margin: 15px;
+}
+
+.question {
+    background: white;
+    display: inline-block;
+    padding: 18px 35px;
+    border-radius: 30px;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.listen-button {
+    display: block;
+    margin: 10px auto 30px;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 30px;
+    background: #6c5ce7;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.game-animals {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.game-animal {
+    background: white;
+    border: 5px solid transparent;
+    border-radius: 30px;
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.game-animal:hover {
+    transform: scale(1.05);
+}
+
+.game-animal img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+}
+
+.game-animal span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.game-animal.correct {
+    border-color: #2ecc71;
+    transform: scale(1.08);
+}
+
+.game-animal.wrong {
+    border-color: #ff6b6b;
+}
+
+.game-message {
+    min-height: 60px;
+    margin-top: 25px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #6c5ce7;
+}
+
+@media (max-width: 700px) {
+    .game-animals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .game-animal img {
+        height: 130px;
+    }
+}
+
+.game-finished {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 35px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    animation: finishPop 0.5s ease;
+}
+
+.finish-stars {
+    font-size: 3rem;
+    margin-bottom: 10px;
+
+    animation: starsBounce 1s infinite alternate;
+}
+
+.game-finished h2 {
+    margin: 10px;
+
+    font-size: 3rem;
+
+    color: #6c5ce7;
+}
+
+.game-finished p {
+    font-size: 1.7rem;
+
+    color: #174a82;
+}
+
+.play-again-button {
+    margin-top: 20px;
+
+    padding: 16px 35px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #81c784;
+
+    color: white;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.2s;
+}
+
+.play-again-button:hover {
+    transform: scale(1.08);
+}
+
+@keyframes finishPop {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes starsBounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes countingPop {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+

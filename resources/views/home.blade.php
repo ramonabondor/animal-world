@@ -6,8 +6,8 @@
 
     <div class="home-title">
         <div class="rainbow">🌈</div>
-        <h1>Animal World</h1>
-        <p>Let's learn and play!</p>
+        <h1>Little Explorers</h1>
+        <p>Learn, Play &amp; Discover!</p>
     </div>
 
     <div class="home-cards">
