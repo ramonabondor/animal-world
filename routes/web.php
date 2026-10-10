@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Games\AnimalGameController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\Games\CountingGameController;
+use App\Http\Controllers\Games\CatchGameController;
+use App\Http\Controllers\Games\ColorsGameController;
+use App\Http\Controllers\Games\ShapesGameController;
+use App\Http\Controllers\Games\MemoryGameController;
 
 Route::get('/', fn () => view('home'))->name('home');
 Route::get('/animals', [AnimalController::class, 'index'])->name('animals.index');
@@ -20,4 +24,17 @@ Route::prefix('games')->name('games.')->group(function () {
 
     Route::get('/counting', [CountingGameController::class, 'index'])
         ->name('counting');
+
+    Route::get('/catch', [CatchGameController::class, 'index'])
+    ->name('catch');
+
+    Route::get('/colors', [ColorsGameController::class, 'index'])
+        ->name('colors');
+
+    Route::get('/shapes', [ShapesGameController::class, 'index'])
+        ->name('shapes');
+
+    Route::get('/memory', [MemoryGameController::class, 'index'])
+        ->name('memory');
+   
 });

@@ -15,3 +15,13 @@ window.sayColor = function (name) {
         window.speechSynthesis.speak(speech);
     }
 };
+
+// Page and game modules. Each runs only on its corresponding page.
+import './pages/animal-detail.js';
+import './pages/colors.js';
+import './games/find-animal.js';
+import './games/catch.js';
+import './games/colors.js';
+import './games/counting.js';
+import './games/memory.js';
+import './games/shapes.js';

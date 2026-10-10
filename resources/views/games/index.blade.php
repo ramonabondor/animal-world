@@ -39,60 +39,30 @@
 
 </a>
 
-        <div class="game-card catch-game coming-soon">
-
-            <div class="game-icon">🎈</div>
-
-            <h2>Catch the Object</h2>
-
-            <p>
-                Catch the objects as they appear!
-            </p>
-
-            <span>Coming soon</span>
-        </div>
+       <a href="{{ route('games.catch') }}" class="game-card catch-game">
+    <div class="game-icon">🎈</div>
+    <h2>Catch the Objects</h2>
+    <p>Catch objects and collect points!</p>
+</a>
 
 
-        <div class="game-card colors-game coming-soon">
+        <a href="{{ route('games.colors') }}" class="game-card colors-game">
+    <div class="game-icon">🎨</div>
+    <h2>Colors</h2>
+    <p>Find the correct color!</p>
+</a>
 
-            <div class="game-icon">🎨</div>
+<a href="{{ route('games.shapes') }}" class="game-card shapes-game">
+    <div class="game-icon">🔷</div>
+    <h2>Shapes</h2>
+    <p>Learn and recognize shapes!</p>
+</a>
 
-            <h2>Colors</h2>
-
-            <p>
-                Learn and match the colors!
-            </p>
-
-            <span>Coming soon</span>
-        </div>
-
-
-        <div class="game-card shapes-game coming-soon">
-
-            <div class="game-icon">🔷</div>
-
-            <h2>Shapes</h2>
-
-            <p>
-                Discover circles, squares and more!
-            </p>
-
-            <span>Coming soon</span>
-        </div>
-
-
-        <div class="game-card memory-game coming-soon">
-
-            <div class="game-icon">🧠</div>
-
-            <h2>Memory</h2>
-
-            <p>
-                Find the matching pairs!
-            </p>
-
-            <span>Coming soon</span>
-        </div>
+        <a href="{{ route('games.memory') }}" class="game-card memory-game">
+    <div class="game-icon">🧠</div>
+    <h2>Memory</h2>
+    <p>Find the matching pairs!</p>
+</a>
 
     </div>
 

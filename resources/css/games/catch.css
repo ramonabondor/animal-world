@@ -1,0 +1,187 @@
+/* =========================
+   Catch the Objects
+========================= */
+
+.catch-game-page {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+    text-align: center;
+}
+
+.catch-game-page h1 {
+    margin: 0 0 10px;
+    font-size: 3rem;
+    color: #6c5ce7;
+}
+
+.catch-intro {
+    font-size: 1.4rem;
+    color: #174a82;
+    margin-bottom: 25px;
+}
+
+.catch-info {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.catch-info div {
+    background: white;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #174a82;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.catch-area {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 35px;
+    background: linear-gradient(180deg, #dff7ff, #b9e9ff);
+    border: 5px solid white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.catch-object {
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 75px;
+    height: 75px;
+    padding: 0;
+
+    border: none;
+    border-radius: 20px;
+    background: white;
+
+    font-size: 3.2rem;
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+
+    animation: objectFall var(--fall-duration, 4s) linear forwards;
+
+    touch-action: manipulation;
+}
+
+.catch-object:hover {
+    transform: scale(1.1);
+}
+
+.catch-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    background: rgba(223, 247, 255, 0.94);
+}
+
+.catch-overlay h2 {
+    font-size: 2.5rem;
+    color: #6c5ce7;
+    margin-bottom: 10px;
+}
+
+.catch-overlay p {
+    font-size: 1.5rem;
+    color: #174a82;
+}
+
+.catch-action-button {
+    margin-top: 20px;
+    padding: 17px 35px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #81c784;
+    color: white;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.catch-action-button:hover {
+    transform: scale(1.05);
+}
+
+@keyframes catchAppear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .catch-game-page h1 {
+        font-size: 2.1rem;
+    }
+
+    .catch-info {
+        gap: 10px;
+    }
+
+    .catch-info div {
+        padding: 12px 15px;
+        font-size: 1.1rem;
+    }
+
+    .catch-area {
+        height: 400px;
+    }
+
+    .catch-object {
+        width: 60px;
+        height: 60px;
+        font-size: 2.5rem;
+    }
+}
+
+@keyframes objectFall {
+    from {
+        transform: translateY(-100px) rotate(-10deg);
+    }
+
+    to {
+        transform: translateY(var(--fall-distance)) rotate(10deg);
+    }
+}
+.catch-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.catch-feedback {
+    min-height: 35px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #e17055;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
